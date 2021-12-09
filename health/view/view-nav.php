@@ -15,11 +15,12 @@
                         <div class="menu-area">
                             <div class="limit-box">          
                                 <nav class="main-menu">
+                                    
                                     <ul class="menu-area-main">
-                                        <li class="active"> <a href="index.php">Home</a> </li>
-                                        <li> <a href="aboutus.php">Über uns</a> </li>
-                                        <li> <a href="contact.php">Putztermin buchen</a> </li>
-                                        <li> <a href="contact.php">Adminbereich</a> </li>
+                                        <li class="active"> <a href="index.php?page=home">Home</a> </li>
+                                        <li> <a href="index.php?page=uberuns">Über uns</a> </li>
+                                        <li> <a href="index.php?page=putzterminbuchen">Putztermin buchen</a> </li>
+                                        <li> <a href="index.php?page=adminbereich">Adminbereich</a> </li>
                                     </ul>
                                 </nav>
                             </div>
