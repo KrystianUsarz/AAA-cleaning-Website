@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP-Grundlagen (MV-Architektur)</title>
+    <title>AAA-Cleaning</title>
 </head>
 <body>
     
@@ -16,6 +16,9 @@
         }
         else if ($page === 'putzterminbuchen') {
             require 'view/view-putztermin-buchen.php';
+        }
+        else if ($page === 'angebote') {
+            require 'view/view-angebote.php';
         }
         else if ($page === 'uberuns') {
             require 'view/view-uber-uns.php';

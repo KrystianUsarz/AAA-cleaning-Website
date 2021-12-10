@@ -349,6 +349,8 @@
      padding: 10px 0px;}
  .logo {
      float: left;
+     height: 50px;
+     width: 50px;
 }
  nav.main-menu {
      float: right;

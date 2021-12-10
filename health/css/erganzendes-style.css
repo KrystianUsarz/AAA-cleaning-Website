@@ -1,0 +1,30 @@
+.footer-angaben{
+    margin-left: 50px;
+}
+
+.Angebotliste{
+    margin-bottom: 50px;
+}
+
+.Angebotliste-angebot{
+}
+
+.Angebotliste-preis{
+    padding-bottom: 25px;
+}
+
+.title-angebote{
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+    padding-left: 15px;
+}
+
+.text-angebote{
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.beschreibung-angebote{
+    margin-top: 20px;
+    margin-bottom: 30px;
+}

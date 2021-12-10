@@ -7,7 +7,7 @@
                     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
                         <div class="full">
                             <div class="center-desk">
-                                <div class="logo"> <a href="index.html"><img src="images/logo.jpg" alt="#"></a> </div>
+                                <div class="logo"> <a href="index.html"><img src="images/firmalogo.jpg" alt="#"></a> </div>
                             </div>
                         </div>
                     </div>
@@ -18,6 +18,7 @@
                                     
                                     <ul class="menu-area-main">
                                         <li class="active"> <a href="index.php?page=home">Home</a> </li>
+                                        <li> <a href="index.php?page=angebote">Angebote</a> </li>
                                         <li> <a href="index.php?page=uberuns">Über uns</a> </li>
                                         <li> <a href="index.php?page=putzterminbuchen">Putztermin buchen</a> </li>
                                         <li> <a href="index.php?page=adminbereich">Adminbereich</a> </li>

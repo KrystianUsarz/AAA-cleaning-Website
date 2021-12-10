@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+
   
 <?php include './html-header.php'?>
 
@@ -13,7 +12,7 @@
     <div class="row">
        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
         <div class="abouttitle">
-         <h2>About Us</h2>
+         <h2>Über Uns</h2>
        </div>
        </div>
     </div>
@@ -36,7 +35,7 @@
       </div>
       <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
         <div class="aboutimg">
-          <figure><img src="images/about.jpg" alt="img"/></figure>
+          <figure><img src="./images/freundlichkeit.png" alt="img"/></figure>
           
           
         </div>
