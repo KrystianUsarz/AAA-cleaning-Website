@@ -1,4 +1,4 @@
-<?php include './model/model-angebote.php'?>
+<?php include './model/model-database-connection.php'?>
 
 <!DOCTYPE html>
 <html lang="en">

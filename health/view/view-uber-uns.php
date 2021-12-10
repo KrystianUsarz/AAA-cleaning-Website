@@ -1,6 +1,7 @@
-
-  
-<?php include './html-header.php'?>
+<?php 
+include './model/model-database-connection.php';
+include './html-header.php';
+?>
 
 <!-- body -->
 <body class="main-layout">
@@ -22,25 +23,50 @@
 <!-- about -->
 <div class="about">
   <div class="container">
+  <?php $reverseOutput = 0; ?>
+  <?php $stmt = $pdo->query('SELECT * FROM `uber-uns`');
+    foreach($stmt->fetchAll() as $Text) {
+      $reverseOutput ++;
     
-    <div class="row">
-       <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-        <div class="aboutimg">
-          
-          <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packaged by th
-          The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packaged by th
-          </p>
-         
+      if($reverseOutput % 2 === 0)
+      { ?>
+        <div class="row">
+          <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+              <div class="aboutimg">
+                <figure><img src="./images/freundlichkeit.png" alt="img"/></figure>
+                
+                
+              </div>
+          </div>
+          <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                <div class="aboutimg">
+                  
+                  <p><?php echo($Text['text']) ?></p>
+                
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-        <div class="aboutimg">
-          <figure><img src="./images/freundlichkeit.png" alt="img"/></figure>
-          
-          
+      <?php } 
+      else
+      {?>
+        <div class="row">
+          <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+              <div class="aboutimg">
+                
+                <p><?php echo($Text['text']) ?></p>
+              
+              </div>
+          </div>
+          <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+            <div class="aboutimg">
+              <figure><img src="./images/freundlichkeit.png" alt="img"/></figure>
+              
+              
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+      <?php }
+       } ?>
   </div>
 </div>
 <!-- end about -->
