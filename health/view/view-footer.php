@@ -31,5 +31,5 @@
                     </div>
             </div>
         </div>
-    </footer>
+</footer>
     <!-- end footer -->

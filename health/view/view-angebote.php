@@ -1,8 +1,5 @@
 <?php include './model/model-database-connection.php'?>
 
-<!DOCTYPE html>
-<html lang="en">
-
 <?php include './html-header.php'?>
 
 <!-- body -->
@@ -21,10 +18,10 @@
        </div>
     </div>
   </div>
-</div>
+ </div>
 
-<!-- container für Angebote -->
-<div class="about">
+ <!-- container für Angebote -->
+ <div class="about">
     <div class="container">
         <div class="row Angebotliste">
             <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12">
@@ -67,9 +64,9 @@
             
         </div>
     </div>
-</div>
+ </div>
 
-<!-- end container -->
+ <!-- end container -->
     
     <!-- Javascript files-->
     <script src="js/jquery.min.js"></script>
@@ -84,5 +81,4 @@
     <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="js/custom.js"></script>
 </body>
-
 </html>
