@@ -24,7 +24,7 @@ include './html-header.php';
 <div class="about">
   <div class="container">
   <?php $reverseOutput = 0; ?>
-  <?php $stmt = $pdo->query('SELECT * FROM `uber-uns`');
+  <?php $stmt = $pdo->query('SELECT * FROM `uber_uns`');
     foreach($stmt->fetchAll() as $Text) {
       $reverseOutput ++;
     

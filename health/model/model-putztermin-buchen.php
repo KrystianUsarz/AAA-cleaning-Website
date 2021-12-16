@@ -1,40 +1,25 @@
 <?php 
-    include 'model-db-Verbindung.php';
+    include 'model-database-connection.php';
 $errors = [];
 
 if($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-    $Username = htmlspecialchars(trim($_POST['name'] ?? ''));
-    $PostTitle = htmlspecialchars(trim($_POST['title'] ?? ''));
-    $Context = htmlspecialchars(trim($_POST['text'] ?? ''));
-    $PostImageUrl = htmlspecialchars(trim($_POST['url_link'] ?? ''));
+    $Vorname = htmlspecialchars(trim($_POST['vorname'] ?? ''));
+    $Nachname = htmlspecialchars(trim($_POST['nachname'] ?? ''));
+    $Email = htmlspecialchars(trim($_POST['email'] ?? ''));
+    $Telefonummer = htmlspecialchars(trim($_POST['telefonummer'] ?? ''));
+    $Strasse = htmlspecialchars(trim($_POST['strasse'] ?? ''));
+    $PLZ = htmlspecialchars(trim($_POST['plz'] ?? ''));
+    $Ort = htmlspecialchars(trim($_POST['ort'] ?? ''));
+    $Putzstunden = htmlspecialchars(trim($_POST['putzstunden'] ?? ''));
+    $Bemerkungen = htmlspecialchars(trim($_POST['bemerkungen'] ?? ''));
 
-    $needle = " ";
-
-    if(strpos( $Context, $needle, $offset = 1) === false && strlen($Context) > 30){
-        $errors[] = 'Bitte schreiben sie einen Sinnvollen Blog';
-    }
-    else{
-
-    }
-
-    if ($Username === '') {
-        $errors[] = 'Bitte geben Sie einen Benutzernamen ein.';
-    }
-
-    if ($PostTitle === '') {
-        $errors[] = 'Bitte geben Sie einen Titel ein.';
-    }
-
-    if ($Context === '') {
-        $errors[] = 'Bitte geben Sie ihren Text ein.';
-    }
-
+    
     if (count($errors) === 0) {
-        $stmt = $pdo->prepare('INSERT INTO blog (creator, title, url, context, create_date, likes, dislikes)
-        VALUES (:Username, :Title, :Url, :Context, now(), 0, 0)');
+        $stmt = $pdo->prepare('INSERT INTO termin_buchen (Vorname, Nachname, Email, Telefonummer, Strasse, PLZ, Ort, Putzstunden, Bemerkungen)
+        VALUES (:Vorname, :Nachname, :Email, :Telefonummer, :Strasse, :PLZ, :Ort, :Putzstunden, :Bemerkungen )');
 
-        $stmt->execute([':Username' => $Username, ':Title' => $PostTitle,':Url'=> $PostImageUrl, ':Context' => $Context]);
+        $stmt->execute([':Vorname' => $Vorname, ':Nachname' => $Nachname, ':Email'=> $Email, ':Telefonummer' => $Telefonummer, ':Strasse' => $Strasse, ':PLZ' => $PLZ, ':Ort' => $Ort, ':Putzstunden' => $Putzstunden, ':Bemerkungen' => $Bemerkungen]);
 
     }
 }

@@ -1,3 +1,5 @@
+<?php include './model/model-putztermin-buchen.php'?>
+
 <!DOCTYPE html>
 <html lang="en">
   
@@ -20,34 +22,76 @@
   </div>
 </div>
 
-<!-- about -->
-<div class="about">
-  <div class="container">
-    
-    <div class="row">
-      <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-        <div class="aboutimg">
-          <form action="" method="POST">
+<!-- buchungsformular -->
+<form class="Contact" action="index.php?page=putzterminbuchen" method="POST">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 offset-md-4">
+                    <div class="aboutheading">
+                        <h2>Termin buchen</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                <input name="nachname" id="nachname" class="form-control" placeholder="Nachname" type="text"> <!-- inputfeld name -->
+                            </div>
 
-          <div class="row">
-            <div>
-              <label for="vorname">Vorname</label>
-              <input type="namespace" name="vorname" id="vorname">
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                <input name="vorname" id="vorname" class="form-control" placeholder="Vorname" type="text"> <!-- inputfeld telnummer -->
+                            </div>
+
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                <input name="email" id="email" class="form-control" placeholder="Email" type="email"> <!-- inputfeld email -->
+                            </div>
+
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                <input name="telefonummer" id="telefonummer" class="form-control" placeholder="Telefonummer" type="phonenumber"> <!-- inputfeld telefonnummer -->
+                            </div>
+
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                <input name="strasse" id="strasse"class="form-control" placeholder="Strasse" type="text"> <!-- inputfeld strasse -->
+                            </div>
+
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                <input name="plz" id="plz" class="form-control" placeholder="PLZ" type="Text"> <!-- inputfeld plz -->
+                            </div>
+
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                <input name="ort" id="ort" class="form-control" placeholder="Ort" type="Text"> <!-- inputfeld plz -->
+                            </div>
+
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                <input name="putzstunden" id="putzstunden" class="form-control" placeholder="Putzstunden" type="halfnumber"> <!-- inputfeld putzstunden -->
+                            </div>
+
+                            <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
+                                <h3>Best passende Halbtage für einen Putztermin</h3>
+
+                                <div class="checkbox">
+                                    <ol name="favoriten" id="favoriten">
+                                        <li><label class="checkbox-label"><input type="checkbox" value="115">  Mittwoch Morgen</label></li>
+                                        <li><label class="checkbox-label"><input type="checkbox" value="115">  Mittwoch Namittag</label></li>
+                                        <li><label class="checkbox-label"><input type="checkbox" value="115">  Donerstag Morgen</label></li>
+                                        <li><label class="checkbox-label"><input type="checkbox" value="115">  Donerstag Namittag</label></li>
+                                        <li><label class="checkbox-label"><input type="checkbox" value="115">  Freitag Morgen</label></li>
+                                        <li><label class="checkbox-label"><input type="checkbox" value="115">  Freitag Namittag</label></li>
+                                    </ol>
+                                </div>
+                            </div>
+                            
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                <textarea name="bemerkungen" id="bemerkungen" class="textarea" placeholder="Bemerkung"></textarea> <!-- inputfeld text -->
+                            </div>
+                        </div>
+                    </div>
+                <button class="send-btn">Absenden</button>
             </div>
-            
-            <div>
-              <label for="name">Name</label>
-              <input type="namespace" name="name" id="name">
-            </div>
-          </div>
-         
-          </form>  
         </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- end about -->
+    </form>
+    <!-- end buchungsformular-->
 
 
 <?php include 'view-footer.php'?>

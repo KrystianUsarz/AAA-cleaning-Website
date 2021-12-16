@@ -9,7 +9,7 @@
     <?php include 'view-nav.php'?>
 
     <!-- über uns einblich auf der Homepage -->
-    <?php $stmt = $pdo->query('SELECT * FROM `homepage-text`');
+    <?php $stmt = $pdo->query('SELECT * FROM `homepage_text`');
     foreach($stmt->fetchAll() as $vorschauUberUns) {?>
     <div class="about">
         <div class="container">
@@ -34,73 +34,6 @@
     <?php }?>
     <!-- end input über uns -->
 
-    <!-- buchungsformular -->
-
-    <form class="Contact" action="index.php?page=putzterminbuchen" method="POST">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 offset-md-4">
-                    <div class="aboutheading">
-                        <h2>Termin buchen</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                        <div class="row">
-                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                                <input class="form-control" placeholder="Nachname" type="text"> <!-- inputfeld name -->
-                            </div>
-
-                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                                <input class="form-control" placeholder="Vorname" type="text"> <!-- inputfeld telnummer -->
-                            </div>
-
-                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                                <input class="form-control" placeholder="Email" type="email"> <!-- inputfeld email -->
-                            </div>
-
-                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                                <input class="form-control" placeholder="Telefonummer" type="phonenumber"> <!-- inputfeld telefonnummer -->
-                            </div>
-
-                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                                <input class="form-control" placeholder="Strasse" type="text"> <!-- inputfeld strasse -->
-                            </div>
-
-                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                                <input class="form-control" placeholder="PLZ" type="Text"> <!-- inputfeld plz -->
-                            </div>
-
-                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                                <input class="form-control" placeholder="Putzstunden" type="halfnumber"> <!-- inputfeld putzstunden -->
-                            </div>
-
-                            <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
-                                <h3>Best passende Halbtage für einen Putztermin</h3>
-
-                                <div class="checkbox">
-                                    <ol name="favoriten" id="favoriten">
-                                        <li><label class="checkbox-label"><input type="checkbox" value="115">  Mittwoch Morgen</label></li>
-                                        <li><label class="checkbox-label"><input type="checkbox" value="115">  Mittwoch Namittag</label></li>
-                                        <li><label class="checkbox-label"><input type="checkbox" value="115">  Donerstag Morgen</label></li>
-                                        <li><label class="checkbox-label"><input type="checkbox" value="115">  Donerstag Namittag</label></li>
-                                        <li><label class="checkbox-label"><input type="checkbox" value="115">  Freitag Morgen</label></li>
-                                        <li><label class="checkbox-label"><input type="checkbox" value="115">  Freitag Namittag</label></li>
-                                    </ol>
-                                </div>
-                            </div>
-                            
-                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                                <textarea class="textarea" placeholder="Bemerkung"></textarea> <!-- inputfeld text -->
-                            </div>
-                        </div>
-                    </div>
-                <button class="send-btn">Make an Appointment</button>
-            </div>
-        </div>
-    </form>
-    <!-- end buchungsformular-->
     <!-- Javascript files-->
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
