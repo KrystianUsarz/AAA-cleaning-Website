@@ -6,9 +6,6 @@
     margin-bottom: 50px;
 }
 
-.Angebotliste-angebot{
-}
-
 .Angebotliste-preis{
     padding-bottom: 25px;
 }
@@ -27,4 +24,13 @@
 .beschreibung-angebote{
     margin-top: 20px;
     margin-bottom: 30px;
+}
+
+label.checkbox-label input[type=checkbox]{
+    position: relative;
+    vertical-align: middle;
+    bottom: 1px;
+}
+.checkbox{
+    margin-top: 30px;
 }

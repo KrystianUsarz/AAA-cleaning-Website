@@ -36,7 +36,7 @@
 
     <!-- buchungsformular -->
 
-    <form class="Contact" action="POST" method="">
+    <form class="Contact" action="index.php?page=putzterminbuchen" method="POST">
         <div class="container">
             <div class="row">
                 <div class="col-md-4 offset-md-4">
@@ -76,8 +76,22 @@
                                 <input class="form-control" placeholder="Putzstunden" type="halfnumber"> <!-- inputfeld putzstunden -->
                             </div>
 
-                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                            <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
+                                <h3>Best passende Halbtage für einen Putztermin</h3>
 
+                                <div class="checkbox">
+                                    <ol name="favoriten" id="favoriten">
+                                        <li><label class="checkbox-label"><input type="checkbox" value="115">  Mittwoch Morgen</label></li>
+                                        <li><label class="checkbox-label"><input type="checkbox" value="115">  Mittwoch Namittag</label></li>
+                                        <li><label class="checkbox-label"><input type="checkbox" value="115">  Donerstag Morgen</label></li>
+                                        <li><label class="checkbox-label"><input type="checkbox" value="115">  Donerstag Namittag</label></li>
+                                        <li><label class="checkbox-label"><input type="checkbox" value="115">  Freitag Morgen</label></li>
+                                        <li><label class="checkbox-label"><input type="checkbox" value="115">  Freitag Namittag</label></li>
+                                    </ol>
+                                </div>
+                            </div>
+                            
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                                 <textarea class="textarea" placeholder="Bemerkung"></textarea> <!-- inputfeld text -->
                             </div>
                         </div>
