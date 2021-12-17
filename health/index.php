@@ -15,7 +15,7 @@
         require 'view/view-uber-uns.php';
     }
     else if ($page === 'adminbereich') {
-        require '';
+        require 'view/view-login-admin.php';
     }
     else {
         echo '404 page not found';

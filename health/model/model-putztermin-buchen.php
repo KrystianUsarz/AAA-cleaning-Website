@@ -14,6 +14,10 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
     $Putzstunden = htmlspecialchars(trim($_POST['putzstunden'] ?? ''));
     $Bemerkungen = htmlspecialchars(trim($_POST['bemerkungen'] ?? ''));
 
+    if($Vorname === ''){
+        $errors[] = 'Geben sie bitte ihren Namen ein'; 
+
+    }
     
     if (count($errors) === 0) {
         $stmt = $pdo->prepare('INSERT INTO termin_buchen (Vorname, Nachname, Email, Telefonummer, Strasse, PLZ, Ort, Putzstunden, Bemerkungen)
