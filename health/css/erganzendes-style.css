@@ -35,3 +35,14 @@ label.checkbox-label input[type=checkbox]{
     margin-top: 30px;
     margin-bottom: 20px;
 }
+
+.error-box {
+    color: red;
+    background-color: rgb(250, 220, 220);
+    border: 1px solid red;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    margin: 30px ;
+}

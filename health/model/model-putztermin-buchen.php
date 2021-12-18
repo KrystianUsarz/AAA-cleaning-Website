@@ -15,8 +15,35 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
     $Bemerkungen = htmlspecialchars(trim($_POST['bemerkungen'] ?? ''));
 
     if($Vorname === ''){
-        $errors[] = 'Geben sie bitte ihren Namen ein'; 
+        $errors[] = 'Geben sie bitte ihren Namen an'; 
+    }
 
+    if($Nachname === ''){
+        $errors[] = 'Geben sie bitte ihren Nachnamen an'; 
+    }
+
+    if($Email === ''){
+        $errors[] = 'Geben sie bitte ihre Emailadresse an'; 
+    }
+
+    if($Telefonummer === ''){
+        $errors[] = 'Geben sie bitte ihre Telefonummer an'; 
+    }
+
+    if($Strasse === ''){
+        $errors[] = 'Geben sie bitte ihre Strasse an'; 
+    }
+
+    if($PLZ === ''){
+        $errors[] = 'Geben sie bitte ihre Postleitzahl an'; 
+    }
+
+    if($Ort === ''){
+        $errors[] = 'Geben sie bitte ihren Wohnort an'; 
+    }
+
+    if($Putzstunden === ''){
+        $errors[] = 'Geben sie bitte die Putzstunden an'; 
     }
     
     if (count($errors) === 0) {
