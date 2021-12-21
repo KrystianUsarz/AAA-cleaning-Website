@@ -84,12 +84,13 @@
 
                                     <div class="checkbox">
                                         <ol name="favoriten" id="favoriten">
-                                            <li><label class="checkbox-label"><input type="checkbox" value="115">  Mittwoch Morgen</label></li>
-                                            <li><label class="checkbox-label"><input type="checkbox" value="115">  Mittwoch Namittag</label></li>
-                                            <li><label class="checkbox-label"><input type="checkbox" value="115">  Donerstag Morgen</label></li>
-                                            <li><label class="checkbox-label"><input type="checkbox" value="115">  Donerstag Namittag</label></li>
-                                            <li><label class="checkbox-label"><input type="checkbox" value="115">  Freitag Morgen</label></li>
-                                            <li><label class="checkbox-label"><input type="checkbox" value="115">  Freitag Namittag</label></li>
+                                            <input type="hidden" for="halbtage[]" value="">
+                                            <li><label class="checkbox-label"><input type="checkbox" value="1" name="halbtage[]">  Mittwoch Morgen</label></li>
+                                            <li><label class="checkbox-label"><input type="checkbox" value="2" name="halbtage[]">  Mittwoch Namittag</label></li>
+                                            <li><label class="checkbox-label"><input type="checkbox" value="3" name="halbtage[]">  Donerstag Morgen</label></li>
+                                            <li><label class="checkbox-label"><input type="checkbox" value="4" name="halbtage[]">  Donerstag Namittag</label></li>
+                                            <li><label class="checkbox-label"><input type="checkbox" value="5" name="halbtage[]">  Freitag Morgen</label></li>
+                                            <li><label class="checkbox-label"><input type="checkbox" value="6" name="halbtage[]">  Freitag Namittag</label></li>
                                         </ol>
                                     </div>
                                 </div>

@@ -14,6 +14,8 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
     $Putzstunden = htmlspecialchars(trim($_POST['putzstunden'] ?? ''));
     $Bemerkungen = htmlspecialchars(trim($_POST['bemerkungen'] ?? ''));
 
+
+
     if($Vorname === ''){
         $errors[] = 'Geben sie bitte ihren Namen an'; 
     }
@@ -52,6 +54,34 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $stmt->execute([':Vorname' => $Vorname, ':Nachname' => $Nachname, ':Email'=> $Email, ':Telefonummer' => $Telefonummer, ':Strasse' => $Strasse, ':PLZ' => $PLZ, ':Ort' => $Ort, ':Putzstunden' => $Putzstunden, ':Bemerkungen' => $Bemerkungen]);
 
+        if(isset($_POST['halbtage']))
+        {
+            $Halbtage = $_POST['halbtage'];
+        
+            foreach($Halbtage as $Halbtag){
+                if($Halbtag === '1'):
+                    $favHalbtag = 'Mittwoch Morgen';
+                elseif($Halbtag === '2'):
+                    $favHalbtag = 'Mittwoch Nachmittag';
+                elseif($Halbtag === '3'):
+                    $favHalbtag = 'Donnrstag Morgen';
+                elseif($Halbtag === '4'):
+                    $favHalbtag = 'Donnrstag Nachmittag';
+                elseif($Halbtag === '5'):
+                    $favHalbtag = 'Freizag Morgen';
+                elseif($Halbtag === '6'):
+                    $favHalbtag = 'Mittwoch Nachmittag';
+                endif;
+                
+                $stmt = $pdo->prepare('INSERT INTO termin_buchen (fk_Kunde, Halbtag)
+                VALUES (:fk_Kunde, :Halbtag )');
+                $stmt->execute([':fk_Kunde' => $Vorname, ':Halbtag' => $favHalbtag]);
+            }
+        
+        }
+        else{
+            
+        }
     }
 }
 ?>
