@@ -79,12 +79,22 @@
                                     <input name="putzstunden" id="putzstunden" class="form-control" placeholder="Putzstunden" type="halfnumber"> <!-- inputfeld putzstunden -->
                                 </div>
 
+                                <?php  
+                                    $value = 0;
+                                    
+                                    $stmt = $pdo->query('SELECT * FROM `termin_buchen`');
+                                    foreach($stmt->fetchAll() as $Kunde){
+                                        $value = $Kunde['KundeID'];
+                                    }
+
+                                    echo("<input type='hidden' name='kundenID' id='kundenID' value='$value'>");
+                                ?>    
+                            
                                 <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
                                     <h3>Best passende Halbtage für einen Putztermin</h3>
-
+  
                                     <div class="checkbox">
-                                        <ol name="favoriten" id="favoriten">
-                                            <input type="hidden" for="halbtage[]" value="">
+                                        <ol name="favoriten" id="favoriten">                
                                             <li><label class="checkbox-label"><input type="checkbox" value="1" name="halbtage[]">  Mittwoch Morgen</label></li>
                                             <li><label class="checkbox-label"><input type="checkbox" value="2" name="halbtage[]">  Mittwoch Namittag</label></li>
                                             <li><label class="checkbox-label"><input type="checkbox" value="3" name="halbtage[]">  Donerstag Morgen</label></li>
@@ -94,6 +104,7 @@
                                         </ol>
                                     </div>
                                 </div>
+
                                 
                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
                                     <textarea name="bemerkungen" id="bemerkungen" class="textarea" placeholder="Bemerkung"></textarea> <!-- inputfeld text -->

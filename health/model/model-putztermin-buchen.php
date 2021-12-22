@@ -56,7 +56,9 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if(isset($_POST['halbtage']))
         {
+            var_dump($_POST);
             $Halbtage = $_POST['halbtage'];
+            $fk_Kunde = $_POST['kundenID'];
         
             foreach($Halbtage as $Halbtag){
                 if($Halbtag === '1'):
@@ -75,7 +77,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
                 
                 $stmt = $pdo->prepare('INSERT INTO termin_buchen (fk_Kunde, Halbtag)
                 VALUES (:fk_Kunde, :Halbtag )');
-                $stmt->execute([':fk_Kunde' => $Vorname, ':Halbtag' => $favHalbtag]);
+                $stmt->execute([':fk_Kunde' => $fk_Kunde, ':Halbtag' => $favHalbtag]);
             }
         
         }
