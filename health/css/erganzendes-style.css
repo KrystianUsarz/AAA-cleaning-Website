@@ -46,3 +46,19 @@ label.checkbox-label input[type=checkbox]{
     padding-left: 50px;
     margin: 30px ;
 }
+
+.admin-Login-Bestätigung{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 200px 0px;
+}
+
+.admin-Login-Bestätigung-btn{
+    border:2px solid gray;
+    background-color: gray;
+    margin: 10px;
+    font:white;
+}
+    
+

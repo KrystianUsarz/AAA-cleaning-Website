@@ -8,8 +8,7 @@
 <body class="main-layout">
 
     <?php 
-    echo($LoginSucces);
-    if($LoginSucces === '0'): 
+        if($LoginSucces === '0'): 
     ?>
     
         <?php include 'view/view-nav.php';?>
@@ -55,11 +54,16 @@
         <script src="js/custom.js"></script>
     <?php     
     elseif ($LoginSucces === '1'):?>
-        <?php 
-        include 'view-nav.php';
-        require './view/view-homepage.php';
-        ?>
 
+        <?php include 'view/view-nav.php';?>
+
+        <div class="admin-Login-Bestätigung">
+            <p>Sie haben sich erfolgreich angemeldet.</p><br>
+            <p> </p>
+            <a class="admin-Login-Bestätigung-btn" href="index.php?page=adminhome">OK</a>
+        </div>
+
+        <?php include 'view/view-footer.php' ?>
 
         <!-- Javascript files-->
         <script src="js/jquery.min.js"></script>
@@ -68,7 +72,6 @@
         <script src="js/jquery-3.0.0.min.js"></script>
         <script src="js/plugin.js"></script>
 
-        <?php include 'view-footer.php' ?>
 
         <!-- sidebar -->
         <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>

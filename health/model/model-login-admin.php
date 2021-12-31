@@ -7,12 +7,10 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
     foreach($stmt->fetchAll() as $Login) {
 
         if($Login['Benutzername'] == $_POST['username'] && $Login['Passwort'] == $_POST['password']){
-            echo('<h1>halllllo</h1>');
             $LoginSucces = '1';
             break;
         }
         else{
-            echo('<h1>byebye</h1>');
             $LoginSucces = '0';
         }
     }

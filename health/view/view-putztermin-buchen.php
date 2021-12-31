@@ -86,7 +86,7 @@
                                     foreach($stmt->fetchAll() as $Kunde){
                                         $value = $Kunde['KundeID'];
                                     }
-
+                                    $value += 1;
                                     echo("<input type='hidden' name='kundenID' id='kundenID' value='$value'>");
                                 ?>    
                             

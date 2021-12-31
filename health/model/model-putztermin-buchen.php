@@ -17,38 +17,68 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
     if($Vorname === ''){
-        $errors[] = 'Geben sie bitte ihren Namen an'; 
+        $errors[] = 'Geben sie bitte ihren Namen an.'; 
+    }
+    else if(preg_match('~[0-9]+~', $Vorname)){
+        $errors[] = 'Geben sie bitte einen gültigen Voramen ohne Zahlen an.';
     }
 
     if($Nachname === ''){
-        $errors[] = 'Geben sie bitte ihren Nachnamen an'; 
+        $errors[] = 'Geben sie bitte ihren Nachnamen an.'; 
+    }
+    else if(preg_match('~[0-9]+~', $Nachname)){
+        $errors[] = 'Geben sie bitte einen gültigen Nachnamen ohne Zahlen an.';
     }
 
     if($Email === ''){
-        $errors[] = 'Geben sie bitte ihre Emailadresse an'; 
+        $errors[] = 'Geben sie bitte ihre Emailadresse an.'; 
     }
 
     if($Telefonummer === ''){
-        $errors[] = 'Geben sie bitte ihre Telefonummer an'; 
+        $errors[] = 'Geben sie bitte ihre Telefonummer an.'; 
+    }
+    else if(is_numeric($Telefonummer) == false){
+        $errors[] = 'Geben sie bitte eine gültie Telefonummer an.';
+    }
+    else if (strlen($Telefonummer) !== 12 && strlen($Telefonummer) !== 10){
+        $errors[] = 'Geben sie bitte eine gültige Telefonummer an.';
     }
 
     if($Strasse === ''){
-        $errors[] = 'Geben sie bitte ihre Strasse an'; 
+        $errors[] = 'Geben sie bitte ihre Strasse an.'; 
+    }
+    else if (preg_match('~[0-9]+~', $Strasse) == false) {
+        $errors[] = 'Geben sie bitte ihre Hausnummer bei der Strasse an.';
+    }
+    else if(is_numeric($Strasse)){
+        $errors[] = 'Geben sie bitte einen gültigen Strassennamen mit der Hausnummer an';
     }
 
     if($PLZ === ''){
-        $errors[] = 'Geben sie bitte ihre Postleitzahl an'; 
+        $errors[] = 'Geben sie bitte ihre Postleitzahl an.'; 
+    }
+    else if(is_numeric($PLZ) == false){
+        $errors[] = 'Geben sie bitte eine gültige Postleitzahl an.';
+    }
+    else if (strlen($PLZ) !== 4){
+        $errors[] = 'Geben sie bitte eine gültige Postleitzahl an.';
     }
 
     if($Ort === ''){
-        $errors[] = 'Geben sie bitte ihren Wohnort an'; 
+        $errors[] = 'Geben sie bitte ihren Wohnort an.'; 
+    }
+    else if(preg_match('~[0-9]+~', $Ort)){
+        $errors[] = 'Geben sie bitte einen gültigen Ort ohne Zahlen an.';
     }
 
     if($Putzstunden === ''){
-        $errors[] = 'Geben sie bitte die Putzstunden an'; 
+        $errors[] = 'Geben sie bitte die Putzstunden an.'; 
+    }
+    else if(is_numeric($Putzstunden) == false){
+        $errors[] = 'Geben sie bitte eine gültige anzahl Putzstunden an.';
     }
     
-    if (count($errors) === 0) {
+    if (count($errors) == 0) {
         $stmt = $pdo->prepare('INSERT INTO termin_buchen (Vorname, Nachname, Email, Telefonummer, Strasse, PLZ, Ort, Putzstunden, Bemerkungen)
         VALUES (:Vorname, :Nachname, :Email, :Telefonummer, :Strasse, :PLZ, :Ort, :Putzstunden, :Bemerkungen )');
 
@@ -56,7 +86,6 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if(isset($_POST['halbtage']))
         {
-            var_dump($_POST);
             $Halbtage = $_POST['halbtage'];
             $fk_Kunde = $_POST['kundenID'];
         
@@ -70,12 +99,12 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
                 elseif($Halbtag === '4'):
                     $favHalbtag = 'Donnrstag Nachmittag';
                 elseif($Halbtag === '5'):
-                    $favHalbtag = 'Freizag Morgen';
+                    $favHalbtag = 'Freitag Morgen';
                 elseif($Halbtag === '6'):
-                    $favHalbtag = 'Mittwoch Nachmittag';
+                    $favHalbtag = 'Freitag Nachmittag';
                 endif;
                 
-                $stmt = $pdo->prepare('INSERT INTO termin_buchen (fk_Kunde, Halbtag)
+                $stmt = $pdo->prepare('INSERT INTO favorit_halbtage (fk_Kunde, Halbtag)
                 VALUES (:fk_Kunde, :Halbtag )');
                 $stmt->execute([':fk_Kunde' => $fk_Kunde, ':Halbtag' => $favHalbtag]);
             }
