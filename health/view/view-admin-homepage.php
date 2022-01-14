@@ -5,10 +5,14 @@
 
 
     <body>
-        <div>
+        <div class="admin-Login-Bestätigung">
             <p>Zum ausloggen drücken sie bitte den Knopf Ausloggen</p>
-            <a href="index.php?page=home">Ausloggen</a>
+            <a class="admin-Login-Bestätigung-btn" href="index.php?page=home">Ausloggen</a>
         </div>
         
     </body>
+
+<?php
+    include 'view/view-footer.php';
+?>
 </html>
