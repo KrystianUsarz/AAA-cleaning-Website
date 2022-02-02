@@ -9,7 +9,7 @@
                             <div class="center-desk">
                                 <div class="logo"> <a href="index.html"><img src="images/firmalogo.jpg" alt="#"></a> </div>
                             </div>
-                        </div>
+                        </div>  
                     </div>
                     <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
                         <div class="menu-area">
