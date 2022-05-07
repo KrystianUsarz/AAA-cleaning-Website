@@ -1,9 +1,7 @@
-<?php include './model/model-putztermin-buchen.php'?>
-
-<!DOCTYPE html>
-<html lang="en">
-  
-<?php include './html-header.php'?>
+<?php 
+    include './model/model-putztermin-buchen.php';
+    include './html-header.php'
+?>
 
     <!-- body -->
     <body class="main-layout">

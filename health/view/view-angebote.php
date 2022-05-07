@@ -1,6 +1,7 @@
-<?php include './model/model-database-connection.php'?>
-
-<?php include './html-header.php'?>
+<?php 
+    include './model/model-database-connection.php';
+    include './html-header.php'
+?>
 
 <!-- body -->
 
