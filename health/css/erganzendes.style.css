@@ -64,3 +64,30 @@ label.checkbox-label input[type=checkbox]{
 #manage-Homepage{
     
 }
+
+.delete-btn{
+    font-size: 13px;
+    border: #000000 solid 2px;
+    background-color: #000000;
+    color: #fff;
+    border-radius: 20px;
+    margin-top: 45px;
+}
+
+#angebote-löschen{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#manage-Angebote{
+
+}
+.uebertitel-adminbereich{
+    margin-left: 100px;
+}
+
+.aboutheading{
+    font-size: medium;
+}

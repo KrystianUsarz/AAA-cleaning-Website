@@ -9,7 +9,7 @@
 
     <?php include 'view-nav.php'?>
 
-    <!-- über uns einblich auf der Homepage -->
+    <!-- über uns einblick auf der Homepage -->
     <?php $stmt = $pdo->query('SELECT * FROM `homepage_text`');
     foreach($stmt->fetchAll() as $VorschauHomepage) {?>
         <div class="about">

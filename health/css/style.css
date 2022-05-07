@@ -1397,11 +1397,11 @@
  .aboutheading {
     text-align: center;
     border:#12dc12 solid 1px;
-    margin-bottom: 15px;
+    margin-bottom: 50px;
 }
  .aboutheading h2 {
-     padding: 5px 0px;
-     font-size: 40px;
+     padding: 10px 20px;
+     font-size: 30px;
      font-weight: 400;
 }
  .about .aboutimg {

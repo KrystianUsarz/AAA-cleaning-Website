@@ -29,16 +29,16 @@
             require 'view/view-admin-manage-homepage.php';
         break;
         case 'manageangebote':
-            require 'view/view-admin-manage-homepage.php';
+            require 'view/view-admin-manage-angebote.php';
         break;
         case 'manageauberuns':
-            require 'view/view-admin-manage-homepage.php';
+            require 'view/view-admin-manage-uber-uns.php';
         break;
         case 'calender':
-            require 'view/view-admin-manage-homepage.php';
+            require 'view/view-admin-calender.php';
         break;
         case 'clients':
-            require 'view/view-admin-manage-homepage.php';
+            require 'view/view-admin-clientss.php';
         break;
         default:
             echo '404 page not found';

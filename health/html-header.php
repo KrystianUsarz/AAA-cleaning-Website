@@ -24,7 +24,7 @@
       <!-- Scrollbar Custom CSS -->
       <link rel="stylesheet" href="./css/jquery.mCustomScrollbar.min.css">
 
-      <link rel="stylesheet" href="./css/erganzendes-style.css">
+      <link rel="stylesheet" href="./css/erganzendes.style.css">
       <!-- Tweaks for older IEs-->
       <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
