@@ -4,7 +4,7 @@
 ?>
 
 <!-- body -->
-<body class="main-layout all-bodys">
+<body class="all-bodys">
 
   <?php include 'view-nav.php'?>
 

@@ -34,12 +34,6 @@
         case 'manageuberuns':
             require 'view/view-admin-manage-uber-uns.php';
         break;
-        case 'calender':
-            require 'view/view-admin-calender.php';
-        break;
-        case 'clients':
-            require 'view/view-admin-clientss.php';
-        break;
         default:
             echo '404 page not found';
         break;

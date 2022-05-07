@@ -20,9 +20,7 @@
                                         <li class="active"> <a href="">Ausloggen</a> </li>
                                         <li> <a href="index.php?page=managehomepage">Homepage verwalten</a> </li>
                                         <li> <a href="index.php?page=manageangebote">Angebote verwalten</a> </li>
-                                        <li> <a href="index.php?page=manageauberuns">Über Uns verwalten</a> </li>
-                                        <li> <a href="index.php?page=calender">Kalender</a> </li>
-                                        <li> <a href="index.php?page=clients">Kunden</a> </li>
+                                        <li> <a href="index.php?page=manageuberuns">Über Uns verwalten</a> </li>
                                     </ul>
                                 </nav>
                             </div>

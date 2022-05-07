@@ -26,7 +26,12 @@
      line-height: 1.80857;
      font-weight: normal;
      overflow-x: hidden;
+     min-height: 900px;
+     height:100vh;
 }
+
+html, body{min-height:100%;}
+
  a {
      color: #1f1f1f;
      text-decoration: none !important;
@@ -1623,6 +1628,7 @@
      color: #fff;
 }
  .footer {
+     margin-top: 50px;
      background-color: #032703;
      padding-bottom: 36px;
 }

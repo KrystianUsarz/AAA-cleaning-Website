@@ -81,13 +81,15 @@ label.checkbox-label input[type=checkbox]{
     flex-direction: column;
 }
 
-#manage-Angebote{
-
-}
 .uebertitel-adminbereich{
     margin-left: 100px;
 }
 
 .aboutheading{
     font-size: medium;
+}
+
+.all-bodys body {
+    min-height: 10000px;
+    background-color: #f60;
 }
