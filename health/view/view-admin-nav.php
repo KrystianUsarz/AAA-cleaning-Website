@@ -18,10 +18,11 @@
                                     
                                     <ul class="menu-area-main">
                                         <li class="active"> <a href="">Ausloggen</a> </li>
-                                        <li> <a href="">Homepage verwalten</a> </li>
-                                        <li> <a href="">Angebote verwalten</a> </li>
-                                        <li> <a href="">Kalender</a> </li>
-                                        <li> <a href="">Kunden</a> </li>
+                                        <li> <a href="index.php?page=managehomepage">Homepage verwalten</a> </li>
+                                        <li> <a href="index.php?page=manageangebote">Angebote verwalten</a> </li>
+                                        <li> <a href="index.php?page=manageauberuns">Über Uns verwalten</a> </li>
+                                        <li> <a href="index.php?page=calender">Kalender</a> </li>
+                                        <li> <a href="index.php?page=clients">Kunden</a> </li>
                                     </ul>
                                 </nav>
                             </div>
