@@ -20,7 +20,7 @@
             require 'view/view-uber-uns.php';
         break;
         case 'adminbereich':
-            require 'view/view-login-admin.php';
+            require 'view/view-admin-login.php';
         break;
         case 'adminhome':
             require 'view/view-admin-homepage.php';
