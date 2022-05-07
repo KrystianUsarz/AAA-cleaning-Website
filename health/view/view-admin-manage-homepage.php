@@ -3,7 +3,7 @@
     include 'view-admin-nav.php';
 ?>
 
-<body id="manage-Homepage">
+<body id="manage-Homepage" class="main-layout all-bodys">
 
     <form class="Contact" action="index.php?page=putzterminbuchen" method="POST">
         <div class="container">

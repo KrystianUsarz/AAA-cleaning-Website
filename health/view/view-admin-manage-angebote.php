@@ -4,7 +4,7 @@
     include 'view-admin-nav.php';
 ?>
 
-<body id="manage-Angebote">
+<body id="manage-Angebote" class="main-layout all-bodys">
 
     <form class="Contact" action="index.php?page=manageangebote" method="POST">
         <div class="container">

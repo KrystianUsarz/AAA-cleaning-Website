@@ -31,7 +31,7 @@
         case 'manageangebote':
             require 'view/view-admin-manage-angebote.php';
         break;
-        case 'manageauberuns':
+        case 'manageuberuns':
             require 'view/view-admin-manage-uber-uns.php';
         break;
         case 'calender':

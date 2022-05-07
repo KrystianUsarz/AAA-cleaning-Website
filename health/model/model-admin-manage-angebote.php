@@ -20,7 +20,7 @@
         {
             $ID = $_POST['delete'];
 
-            $stmt = $pdo->prepare('DELETE FROM angebote WHERE id = ?');
+            $stmt = $pdo->prepare('DELETE FROM angebote WHERE ID = ?');
             $stmt->execute(array($ID));
         }
     }
